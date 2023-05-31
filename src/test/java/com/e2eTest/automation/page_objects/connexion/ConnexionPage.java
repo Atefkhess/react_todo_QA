@@ -56,7 +56,7 @@ public class ConnexionPage {
 	public static WebElement tacheDescr;
 	
 	@FindBy(how = How.XPATH, using ="//button[@class='btn btn-primary']")
-	public static WebElement ajoutTacheBtn;
+	public static WebElement ajoutTacheBtn;//
 	
 	@FindBy(how = How.XPATH, using ="//div[@class='container mt-5']//span[1]")
 	public static WebElement localStorage;

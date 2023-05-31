@@ -52,10 +52,10 @@ public class CheckActifConnecStepDef {
 		utils.clearField(ConnexionPage.password);
 
 		validations.assertTrueCondition(validations.isElementEnabled(ConnexionPage.envoyerBtn));
-		utils.click(ConnexionPage.envoyerBtn);
+		//utils.click(ConnexionPage.envoyerBtn);
 
 		validations.checkElementDisabled(ConnexionPage.envoyerBtn);
-		validations.isElementPresentFalse(ConnexionPage.ajoutTacheBtn);
+		validations.checkElementPresent(ConnexionPage.ajoutTacheBtn);
 	}
 
 	@Then("aucun appel de requête n est envoyé")

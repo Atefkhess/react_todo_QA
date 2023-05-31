@@ -1,1 +1,6 @@
-/target/
+target/
+*.exe
+*.project
+*.settings
+*.classpath
+*.idea

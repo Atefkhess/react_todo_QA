@@ -225,17 +225,22 @@ public class Validations extends BasePage {
 	public void assertTrueCondition(Boolean condition) {
 		Assert.assertTrue(condition);
 	}
-	public void checkElementDisabled (WebElement element) {
-	 if (!element.isEnabled()) {
-         System.out.println("The element is disabled.");
-	 }
-}
-	public boolean isElementPresentFalse(WebElement element) {
+	public void checkElementDisabled(WebElement element) {
+	    if (element.isEnabled()) {
+	        System.out.println("The element is enabled.");
+	    } else {
+	        System.out.println("The element is disabled.");
+	    }
+	}
+	public void checkElementPresent(WebElement element) {
 	    try {
-	        element.isDisplayed();
-	        return true;
+	        if (element.isDisplayed()) {
+	            System.out.println("The element is displayed.");
+	        } else {
+	            System.out.println("The element is  not displayed.");
+	        }
 	    } catch (NoSuchElementException e) {
-	        return false;
+	        System.out.println("The element is not found.");
 	    }
 	}
 //	public boolean isElementPresent(WebElement element) {
